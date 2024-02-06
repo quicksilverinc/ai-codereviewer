@@ -111,7 +111,8 @@ function createPrompt(file, chunk, prDetails) {
 - Do not give positive comments or compliments.
 - Provide comments and suggestions ONLY if there is something to improve, otherwise "reviews" should be an empty array.
 - Write the comment in GitHub Markdown format.
-- Check for all common coding issues and suggest improvements such as missing error handling, using objects without testing for null.
+- Check for common coding issues and suggest improvements such as missing error handling, using objects without testing for null, and possible issues with promises.
+- Do not give comments on formatting, namming, or style.
 - Use the given description only for the overall context and only comment the code.
 - IMPORTANT: NEVER suggest adding comments to the code.
 
