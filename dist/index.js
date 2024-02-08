@@ -148,7 +148,7 @@ function getAIResponse(prompt) {
             presence_penalty: 0,
         };
         try {
-            const response = yield openai.chat.completions.create(Object.assign(Object.assign(Object.assign({}, queryConfig), (OPENAI_API_MODEL === "gpt-3.5-turbo"
+            const response = yield openai.chat.completions.create(Object.assign(Object.assign(Object.assign({}, queryConfig), (OPENAI_API_MODEL === "gpt-3.5-turbo-0125"
                 ? { response_format: { type: "json_object" } }
                 : {})), { messages: [
                     {
@@ -21797,7 +21797,7 @@ class Edits extends resource_1.APIResource {
      *
      * @deprecated The Edits API is deprecated; please use Chat Completions instead.
      *
-     * https://openai.com/blog/gpt-4-api-general-availability#deprecation-of-the-edits-api
+     * https://openai.com/blog/gpt-3.5-turbo-0125-api-general-availability#deprecation-of-the-edits-api
      */
     create(body, options) {
         return this._client.post('/edits', { body, ...options });
